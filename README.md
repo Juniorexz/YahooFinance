@@ -28,35 +28,39 @@ O webjob é uma função executável que é executada de forma contínua ou agen
 No banco de dados Azure SQL, foram executados os seguintes comandos SQL para criar as tabelas e funções necessárias para o funcionamento do projeto:
 
 1. **Funções:**
-   - `CREATE FUNCTION CalcularVariacaoRelativaAD1 ()
-RETURNS TABLE
-AS
-RETURN
-(
-    SELECT
-        [Id],
-        [Date],
-        [Value],
-        [Company],
-        CASE
-            WHEN lag([Value]) OVER (ORDER BY [Date]) IS NULL THEN '-' -- Caso não haja um dia anterior, retorna '-'
-            ELSE FORMAT((([Value] - lag([Value]) OVER (ORDER BY [Date])) / lag([Value]) OVER (ORDER BY [Date])) * 100, 'N2') + '%' -- Calcula a variação percentual em relação ao dia anterior
-        END AS [Variacao em relacao a d1]
-    FROM
-    (
-        SELECT TOP 30
-            [Id],
-            [Date],
-            [Value],
-            [Company]
-        FROM
-            [dbo].[T_HistoricalPrices]
-        ORDER BY
-            [Date] DESC
-    ) AS Last30DaysData
-);` :  Função que calcula a variação dos preços em relação ao pregão anterior
+   ``` sql
+   CREATE FUNCTION CalcularVariacaoRelativaAD1 ()
+	RETURNS TABLE
+	AS
+	RETURN
+	(
+	    SELECT
+	        [Id],
+	        [Date],
+	        [Value],
+	        [Company],
+	        CASE
+	            WHEN lag([Value]) OVER (ORDER BY [Date]) IS NULL THEN '-' -- Caso não haja um dia anterior, retorna '-'
+	            ELSE FORMAT((([Value] - lag([Value]) OVER (ORDER BY [Date])) / lag([Value]) OVER (ORDER BY [Date])) * 100, 'N2') + '%' -- Calcula a variação percentual em relação ao dia anterior
+	        END AS [Variacao em relacao a d1]
+	    FROM
+	    (
+	        SELECT TOP 30
+	            [Id],
+	            [Date],
+	            [Value],
+	            [Company]
+	        FROM
+	            [dbo].[T_HistoricalPrices]
+	        ORDER BY
+	            [Date] DESC
+	    ) AS Last30DaysData
+	);` 
+	```
+Função que calcula a variação dos preços em relação ao pregão anterior
 
-- `CREATE FUNCTION CalcularVariacaoRelativaAPrimeiraData ()
+``` sql
+CREATE FUNCTION CalcularVariacaoRelativaAPrimeiraData ()
 RETURNS TABLE
 AS
 RETURN
@@ -82,9 +86,12 @@ RETURN
         ORDER BY
             [Date] DESC
     ) AS Last30DaysData
-);`: Função que calcula a variação dos preços em relação ao primeiro pregão. 
+);
+```
+Função que calcula a variação dos preços em relação ao primeiro pregão. 
 
- - `CREATE FUNCTION CombineVariacoesRelativas ()
+``` sql
+ CREATE FUNCTION CombineVariacoesRelativas ()
 RETURNS TABLE
 AS
 RETURN
@@ -102,21 +109,26 @@ RETURN
         dbo.CalcularVariacaoRelativaAD1() b
     ON
         a.[Id] = b.[Id]
-);`: Função que calcula a variação dos preços conforme solicitado no desafio.
+);
+```
+ Função que calcula a variação dos preços conforme solicitado no desafio.
 
 
 
 2. **Tabelas:**
-   - `CREATE TABLE [dbo].[T_HistoricalPrices](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Date] [datetime] NULL,
-	[Value] [decimal](18, 14) NULL,
-	[Company] [varchar](50) NULL,
- CONSTRAINT [PK__T_Histor__3214EC078DF8A1F8] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]`: Comando para criar a tabela utilizada no projeto.
+  	 ``` sql
+	   CREATE TABLE [dbo].[T_HistoricalPrices](
+		[Id] [int] IDENTITY(1,1) NOT NULL,
+		[Date] [datetime] NULL,
+		[Value] [decimal](18, 14) NULL,
+		[Company] [varchar](50) NULL,
+	 CONSTRAINT [PK__T_Histor__3214EC078DF8A1F8] PRIMARY KEY CLUSTERED 
+	(
+		[Id] ASC
+	)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+	) ON [PRIMARY]
+	```
+Comando para criar a tabela utilizada no projeto.
 
 ## Instalação e Configuração
 Para instalar e configurar o projeto, siga as instruções na documentação da microsoft. Basta a instalação do visual studio e .net 5. Ao compilar o projeto irá aparecer os pacotes que precisam ser instalados, o próprio visual studio permite a instalação dos pacotes via Nuget [Documentação Microsoft](https://learn.microsoft.com/pt-br/visualstudio/install/install-visual-studio?view=vs-2022).
