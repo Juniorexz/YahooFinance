@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinanceDataAPI</name>
+    </assembly>
+    <members>
+        <member name="M:FinanceDataAPI.Controllers.Auth.auth(System.String,System.String)">
+            <summary>
+            Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Retorna uma string de sucesso</response>
+        </member>
+        <member name="M:FinanceDataAPI.Controllers.Empresas.GetAtivos">
+            <summary>
+            Retorna lista dos nomes dos ativos que estão disponíveis para consulta.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Returna uma string de sucesso</response>
+        </member>
+        <member name="M:FinanceDataAPI.Controllers.FinanceData.PriceHistory(System.String)">
+            <summary>
+            Retorna valor do ativo nos últimos 30 pregões.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Retorna uma string de sucesso</response>
+        </member>
+        <member name="M:FinanceDataAPI.Controllers.FinanceData.VariacaoRelativaAD1(System.String)">
+            <summary>
+            Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao pregão anterior.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Retorna uma string de sucesso</response>
+        </member>
+        <member name="M:FinanceDataAPI.Controllers.FinanceData.VariacaoEmRelacaoAoPrimeiroDia(System.String)">
+            <summary>
+            Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Retorna uma string de sucesso</response>
+        </member>
+        <member name="M:FinanceDataAPI.Controllers.FinanceData.Retornocompleto(System.String)">
+            <summary>
+            Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão e ao pregão anterior.
+            </summary>
+            <returns>string de sucesso</returns>
+            <response code="200">Retorna uma string de sucesso</response>
+        </member>
+    </members>
+</doc>

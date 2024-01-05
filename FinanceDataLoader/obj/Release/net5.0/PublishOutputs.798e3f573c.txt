@@ -1,0 +1,13 @@
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\Settings.job
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\FinanceDataLoader.exe
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\FinanceDataLoader.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\FinanceDataLoader.deps.json
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\FinanceDataLoader.runtimeconfig.json
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\FinanceDataLoader.pdb
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\Newtonsoft.Json.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\System.Data.SqlClient.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\runtimes\win-arm64\native\sni.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\runtimes\win-x64\native\sni.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\runtimes\win-x86\native\sni.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\gdcampos\Desktop\YahooFinance\FinanceDataLoader\obj\Release\net5.0\PubTmp\Out\app_data\Jobs\Triggered\FinanceDataLoader\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

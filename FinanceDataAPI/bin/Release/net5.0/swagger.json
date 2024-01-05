@@ -1,0 +1,179 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Yahoo Finance",
+    "version": "v1"
+  },
+  "paths": {
+    "/Auth/Auth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna uma string de sucesso"
+          }
+        }
+      }
+    },
+    "/Empresas/GetAtivos": {
+      "get": {
+        "tags": [
+          "Empresas"
+        ],
+        "summary": "Retorna lista dos nomes dos ativos que estão disponíveis para consulta.",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returna uma string de sucesso",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/FinanceData/PriceHistory": {
+      "get": {
+        "tags": [
+          "FinanceData"
+        ],
+        "summary": "Retorna valor do ativo nos últimos 30 pregões.",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ativo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna uma string de sucesso",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/FinanceData/VariacaoRelativaAD1": {
+      "get": {
+        "tags": [
+          "FinanceData"
+        ],
+        "summary": "Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao pregão anterior.",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ativo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna uma string de sucesso",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/FinanceData/VariacaoEmRelacaoAoPrimeiroDia": {
+      "get": {
+        "tags": [
+          "FinanceData"
+        ],
+        "summary": "Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão.",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ativo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna uma string de sucesso",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/FinanceData/fullreturn": {
+      "get": {
+        "tags": [
+          "FinanceData"
+        ],
+        "summary": "Retorna lista dos 30 últimos pregãos com a variação dos preços em relacão ao primeiro pregão e ao pregão anterior.",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ativo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna uma string de sucesso",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApJVLytz6BkuI1yB/1m7K2QAAAAACAAAAAAADZgAAwAAAABAAAABT5djhCdboVcFUUG1QA3aTAAAAAASAAACgAAAAEAAAAJh8jTmCIC9PE01JFYBcJAaAAAAA54UXoitnweZv6ajZI9sm/WlXTH+I44pSE+7PTdiSCKZn+6z8d/caCjBHo70q09CLbqAVUQ9vdULVVf3UlUC23CZHn0mbhateTVwLykI86qoXxVxcLsMvquLbdJPQ+EphgS9voNBaKD9rf+TMkCHnE0UhWGP+pf7FoPlwaYG5/NQUAAAAC2JiKhmoD88OCNhqlhBA7OYRp30=</EncryptedPassword>
+    <_PublishTargetUrl>ftps://waws-prod-blu-523.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
+    <History>False|2024-01-05T21:22:17.3247357Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>01/04/2024 02:46:44</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>01/04/2024 02:46:44</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>08/18/2020 14:46:38</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>09/11/2020 13:36:36</publishTime>
+    </File>
+    <File Include="Azure.Security.KeyVault.Certificates.dll">
+      <publishTime>08/11/2020 23:01:40</publishTime>
+    </File>
+    <File Include="Azure.Security.KeyVault.Secrets.dll">
+      <publishTime>08/11/2020 23:01:40</publishTime>
+    </File>
+    <File Include="FinanceDataAPI.deps.json">
+      <publishTime>01/05/2024 18:19:39</publishTime>
+    </File>
+    <File Include="FinanceDataAPI.exe">
+      <publishTime>01/05/2024 18:19:39</publishTime>
+    </File>
+    <File Include="FinanceDataAPI.pdb">
+      <publishTime>01/05/2024 18:19:39</publishTime>
+    </File>
+    <File Include="FinanceDataAPI.runtimeconfig.json">
+      <publishTime>01/05/2024 18:18:51</publishTime>
+    </File>
+    <File Include="FinanceDataAPI.xml">
+      <publishTime>01/05/2024 18:19:39</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>09/12/2019 23:28:44</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>06/25/2020 10:14:14</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/08/2023 04:09:56</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>10/17/2022 20:26:02</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/sni.dll">
+      <publishTime>07/12/2017 08:24:24</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/sni.dll">
+      <publishTime>07/12/2017 08:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/sni.dll">
+      <publishTime>07/12/2017 08:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>10/17/2022 20:26:08</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 10:29:44</publishTime>
+    </File>
+    <File Include="System.Data.SqlClient.dll">
+      <publishTime>10/17/2022 20:16:04</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 10:29:44</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>01/05/2024 18:19:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
